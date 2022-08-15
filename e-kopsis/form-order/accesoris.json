@@ -1,0 +1,116 @@
+{
+    "accesoris": [
+        {
+            "kategori": "seragam",
+            "nama": "Seragam putih",
+            "deskripsi": "size all fit L",
+            "harga": 50000,
+            "gambar": "putih.jpg"
+        },
+        {
+            "kategori": "seragam",
+            "nama": "Seragam biru",
+            "deskripsi": "size all fit L",
+            "harga": 50000,
+            "gambar": "biru.jpg"
+        },
+        {
+            "kategori": "seragam",
+            "nama": "Seragam pramuka",
+            "deskripsi": "size all fit L",
+            "harga": 50000,
+            "gambar": "pramuka.jpg"
+        },   
+        {
+            "kategori": "celana",
+            "nama": "Celana abu-abu",
+            "deskripsi": "size 34",
+            "harga": 50000,
+            "gambar": "cel-abu.jpg"
+        },   
+        {
+            "kategori": "celana",
+            "nama": "Celana biru",
+            "deskripsi": "size 34",
+            "harga": 50000,
+            "gambar": "cel-biru.jpg"
+        },   
+        {
+            "kategori": "celana",
+            "nama": "Celana pramuka",
+            "deskripsi": "size 34",
+            "harga": 50000,
+            "gambar": "cel-pramuka.jpg"
+        },   
+        {
+            "kategori": "atribut",
+            "nama": "Involet kelas X",
+            "deskripsi": "kelas X",
+            "harga": 25000,
+            "gambar": "involet-x.jpg"
+        },   
+        {
+            "kategori": "atribut",
+            "nama": "Involet kelas XI",
+            "deskripsi": "kelas XI",
+            "harga": 25000,
+            "gambar": "involet-xi.jpg"
+        },   
+        {
+            "kategori": "atribut",
+            "nama": "Involet kelas XII",
+            "deskripsi": "kelas XII",
+            "harga": 25000,
+            "gambar": "involet-xii.jpg"
+        },   
+        {
+            "kategori": "atribut",
+            "nama": "Sleyer hijau",
+            "deskripsi": "-",
+            "harga": 10000,
+            "gambar": "sleyer-hijau.jpg"
+        },   
+        {
+            "kategori": "atribut",
+            "nama": "Sleyer biru",
+            "deskripsi": "-",
+            "harga": 10000,
+            "gambar": "sleyer-biru.jpg"
+        },   
+        {
+            "kategori": "atribut",
+            "nama": "Sleyer abu-abu",
+            "deskripsi": "-",
+            "harga": 10000,
+            "gambar": "sleyer-abu.jpg"
+        },   
+        {
+            "kategori": "atribut",
+            "nama": "Sabuk SMK",
+            "deskripsi": "sabuk + gesper logo smk",
+            "harga": 30000,
+            "gambar": "sabuk.jpg"
+        },   
+        {
+            "kategori": "atribut",
+            "nama": "Sabuk Organisasi",
+            "deskripsi": "sabuk + gesper logo tunas kelapa",
+            "harga": 15000,
+            "gambar": "sabuk-org.jpg"
+        },   
+        {
+            "kategori": "atribut",
+            "nama": "Kaos kaki putih",
+            "deskripsi": "kaos kaki putih SMK",
+            "harga": 15000,
+            "gambar": "kaoskaki-putih.jpg"
+        },   
+        {
+            "kategori": "atribut",
+            "nama": "Kaos kaki hitam",
+            "deskripsi": "kaos kaki hitam SMK",
+            "harga": 15000,
+            "gambar": "kaoskaki-hitam.jpg"
+        }   
+    ]
+}

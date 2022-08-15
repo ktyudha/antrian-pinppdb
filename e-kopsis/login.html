@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign in &bullet; myITS SSO</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="https://my.its.ac.id/assets/media/favicons/favicon-web.png">
+    <link rel="stylesheet" type="text/css" href="https://my.its.ac.id/assets/css/its-login.css">
+    <link rel="stylesheet" type="text/css" href="https://my.its.ac.id/assets/plugins/nprogress/nprogress.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="box">
+			<form id="form-login" method="post" autocomplete="off">
+				<div class="text-orange" style="min-height: 20px; font-weight: bold; margin-bottom: 15px; text-align: center">
+					<small class="notification_caps" style="display: none;">Caps lock is on!</small>
+					<small class="my_its_id_required" style="display: none;">myITS ID is required</small>
+				</div>
+
+				<div id="inputusername" class="inputbox">
+					<input type="text" id="username" required autocomplete="off">
+					<label for="">myITS ID</label>
+				</div>
+
+				<div id="inputpassword" class="inputbox">
+					<input type="password" id="password" required autocomplete="off">
+					<label for="">Password</label>
+				</div>
+				<div class="inputbox">
+					<button id="continue" type="button" class="btn btn-block bg-orange">Next</button>
+					<button id="login" type="submit" class="btn btn-block bg-orange" style="display: none">Sign in</button>
+				</div>
+			</form>
+		</div>
+		<footer class="m-t-30">&copy; 2022 SMK Negeri 1 Pungging, Mojokerto.</footer>
+	</div>
+	<script src="https://my.its.ac.id/assets/js/core/jquery.min.js"></script>
+    <script src="https://my.its.ac.id/assets/plugins/nprogress/nprogress.js"></script>
+	
+    
+<script src="https://my.its.ac.id/assets/js/common.min.js"></script>
+<script src="https://my.its.ac.id/assets/js/jsencrypt.min.js"></script>
+
+<script>
+
+const autofillContent = `"${String.fromCharCode(0xFEFF)}"`;
+function checkAutofill(input) {
+    if (!input.value) {
+        const style = window.getComputedStyle(input);
+        if (style.content !== autofillContent)
+            return false;
+    }
+    // the autofill was detected
+    username.classList.add('filled');
+    password.classList.add('filled');
+    return true;
+}
+
+const username = document.querySelector("input[type=text]");
+const password = document.querySelector("input[type=password]");
+
+if (!checkAutofill(username)) {
+    let interval = 0;
+    const intervalId = setInterval(() => {
+        if (checkAutofill(username) || interval++ >= 20)
+            clearInterval(intervalId);
+    }, 100);
+}
+
+$("#username").on('keydown', function (e) {
+    if (e.keyCode == 13) {
+        $('#continue').click();
+    }
+});
+
+$("#inputpassword").on('keydown', function (e) {
+    if (e.keyCode == 13) {
+		submitForm();
+    }
+});
+
+function submitForm() {
+	var encrypted = encrypt();
+	$("#encrypted").val(encrypted);
+
+	$("#form-login").submit();
+}
+
+function encrypt() {
+	var encryptor = new JSEncrypt();
+	encryptor.setPublicKey($('#pubkey').val());
+	var username = $("#username").val();
+	var password = $("#password").val();
+	var device_method = $("#device_method").val();
+	var password_state = $("#password_state").val();
+	var plaintext = { u : username, p : password, dm: device_method, ps: password_state};
+	var myJSON = JSON.stringify(plaintext);
+	var encrypted = encryptor.encrypt(myJSON);
+
+	return encrypted;
+}
+
+$(function() {
+	$(window).keydown(function(event){
+		if(event.keyCode == 13) {
+			event.preventDefault();
+		}
+	});
+
+	loader = `<i class="fa fa-spinner fa-pulse"></i>`;
+	button = `Lanjutkan`;
+	$('#continue').click(function() {
+		if ($("#username").val() == "") {
+		    // $("#login").click();
+			$(".my_its_id_required").show();
+			return
+		} else {
+			$('#continue').empty().append(loader);
+			$("#inputpassword").show();
+			$('#continue').empty().append(button);
+			$("#continue").hide();
+			$(".my_its_id_required").hide();
+			$("#password").focus();
+
+			$("#password_state").val(true);
+			$("#device_method").val("");
+			$("#login").show();
+		}
+	});
+
+	$("#inputusername").click(function(){
+		$('#continue').show();
+		$("#password").val("");
+		$("#inputpassword").hide();
+		$("#login").hide();
+	});
+
+	$("#username").change(function () {
+		if (!$(this).val().length) {
+			$(".my_its_id_required").show();
+			return;
+		}
+		$(".my_its_id_required").hide();
+	});
+
+	$("#login").click(function(){
+		submitForm();
+	});
+});
+</script>
+
+</body>
+</html>

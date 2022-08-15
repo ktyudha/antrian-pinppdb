@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign in &bullet; MyArkasi</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="/loginvsga/img/smk.png" type="image/x-icon">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="box">
+			
+			<form class="form" id="form-login" method="post" autocomplete="off">
+				<div class="image">
+					<img src="/loginvsga/img/smk.png" width="70px" height="70px">
+				</div>
+				
+				<div class="text-red" style="min-height: 20px; font-weight: bold; margin-bottom: 15px; margin-top: 15px; text-align: center">
+					<small class="requieredMyArkasiID" style="display: none;">myArkasi ID is required</small>
+					<small class="error" style="display: none;"></small>
+				</div>
+
+				<div id="inputusername" class="inputbox">
+					<label for="">myArkasi ID</label>
+					<input type="text" id="username" required autocomplete="off">
+				</div>
+
+				<div id="inputpassword" class="inputbox">
+					<label for="">Password</label>
+					<input type="password" id="password" required autocomplete="off">
+				</div>
+				<div class="inputbox">
+					<button id="continue" type="submit" value="Submit" class="btn btn-block bg-orange">Next</button>
+				</div>
+			</form>
+		</div>
+		<span class="m-t-30"><strong>&copy; 2022 Vocational School Graduate Academy</strong></span>
+	</div>
+<script src="action.js"></script>
+</body>
+</html>

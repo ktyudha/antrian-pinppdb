@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    text-align: center;
+    color: #333;
+    padding-bottom: 40px;
+  }
+  
+  a,
+  a:visited {
+    outline: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  .app {
+    position: relative;
+    min-height: 500px;
+    margin: 30px auto;
+    padding: 32px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px #ddd;
+    width: 500px;
+    background: #f5f5f5;
+  }
+  
+  h1 {
+    margin-bottom: 36px;
+  }
+  
+  ul {
+    width: 350px;
+    margin: 0 auto;
+    list-style: none;
+  }
+  
+  ul li {
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    padding: 12px 16px;
+    background: #fff;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  ul li.is-active {
+    color: #fff;
+    background: #2ECC40;
+    border-color: #27b137;
+  }
+  
+  ul li.is-active:hover {
+    background: #69d845;
+  }
+  
+  ul li:hover {
+    background: #f5f5f5;
+    cursor: pointer;
+  }
+  
+  ul li span {
+    float: right;
+  }
+  
+  .total {
+    margin: 0 auto;
+    width: 350px;
+    padding: 20px 16px;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: left;
+  }
+  
+  .total span {
+    float: right;
+  }
+.outputbox{
+    color: #f1c40f;
+    position: relative;
+  margin-bottom: 25px;
+  top: -18px;
+    left: 0;
+    color: #f1c40f;
+    font-size: 12px;
+}
+.btn-block {
+  display: block;
+  width: 100%;
+}
+.btn {
+  border: none;
+  border-top-color: initial;
+  border-top-style: none;
+  border-top-width: initial;
+  border-right-color: initial;
+  border-right-style: none;
+  border-right-width: initial;
+  border-bottom-color: initial;
+  border-bottom-style: none;
+  border-bottom-width: initial;
+  border-left-color: initial;
+  border-left-style: none;
+  border-left-width: initial;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: .5px;
+  box-shadow: 0 2px 3px rgb(0 0 0 / 20%);
+  transition: .5s;
+}
+.bg-orange {
+  background: #f1c40f;
+  color: #013880;
+}
